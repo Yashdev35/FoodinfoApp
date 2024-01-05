@@ -23,29 +23,20 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                    RecepiScreen()
-                   /* // <uses-permission android:name="android.permission.INTERNET"/> without
-                // this permission we cannot connect to internet
-                    //for any kind of usage in the device we have to give permission in the manifest file for
-                    //example for camera, for location, for internet, for storage etc, for internet it doesnt ask the user
-                    // but for other it asks the user*/
+                    /* <uses-permission android:name="android.permission.INTERNET"/> without
+                      this permission we cannot connect to internet
+                      for any kind of usage in the device we have to give permission in the manifest file for
+                      example for camera, for location, for internet, for storage etc, for internet it doesnt ask the user
+                      but for other it asks the user*/
                 }
             }
         }
     }
 }
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     RecepiApplTheme {
-        Greeting("Android")
+        RecepiScreen()
     }
 }

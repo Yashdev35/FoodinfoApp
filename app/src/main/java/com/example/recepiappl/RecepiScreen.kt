@@ -33,8 +33,8 @@ fun RecepiScreen(modifier: Modifier = Modifier) {
     Box (
         modifier = Modifier.fillMaxSize()
     ){
-       /* //in this when block either we are processing the data or we are displaying the data or we are displaying the error
-        //and each case will have a different ui*/
+       /*in this when block either we are processing the data or we are displaying the data or we are displaying the error
+        and each case will have a different ui*/
         when{
             viewstate.Loading -> {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
@@ -54,6 +54,8 @@ fun RecepiScreen(modifier: Modifier = Modifier) {
 fun categoryScreen(categories: List<Category>) {
     LazyVerticalGrid(GridCells.Fixed(2), modifier = Modifier.fillMaxSize()) {
       items(categories){
+          /*the following piece of code says that for each individual item execute the following code
+          execute the following code for each category form the list of categories*/
           categorY ->
             CategoryItem(category = categorY)
       }

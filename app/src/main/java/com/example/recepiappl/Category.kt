@@ -6,9 +6,8 @@ data class Category(
     val strCategoryThumb: String,
     val strCategoryDescription: String
 )
-//above will create a object of category which will hold the data of category
-//now to get the data from api we will create another data class, this will data of categories(list of categories)
-
+/*above will create a object of category which will hold the data of category
+now to get the data from api we will create another data class, this will data of categories(list of categories)*/
 data class CategoryResponse(
     val categories: List<Category>
 )
