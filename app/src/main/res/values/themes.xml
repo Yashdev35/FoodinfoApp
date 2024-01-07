@@ -2,4 +2,6 @@
 <resources>
 
     <style name="Theme.RecepiAppl" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.RecepiApp" parent="android:ThemeOverlay.Material.Dark"/>
+
 </resources>

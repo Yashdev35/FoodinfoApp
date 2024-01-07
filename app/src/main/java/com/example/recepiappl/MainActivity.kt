@@ -10,19 +10,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.recepiappl.ui.theme.RecepiApplTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val navController = rememberNavController()
             RecepiApplTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                   RecepiScreen()
+                    RecepiApp(navController = navController)
+                  // RecepiScreen()
                     /* <uses-permission android:name="android.permission.INTERNET"/> without
                       this permission we cannot connect to internet
                       for any kind of usage in the device we have to give permission in the manifest file for
@@ -37,6 +40,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     RecepiApplTheme {
-        RecepiScreen()
+       // RecepiScreen()
     }
 }
